@@ -1,6 +1,5 @@
 # This dockerfile builds the zap stable release
 FROM ubuntu:18.04
-LABEL maintainer="psiinon@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
