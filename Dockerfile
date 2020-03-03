@@ -84,4 +84,4 @@ RUN chown zap:zap /zap/* && \
 #Change back to zap at the end
 USER zap
 
-CMD ["/zap-webswing.sh/"]
+CMD ["/bin/bash", "/zap-webswing.sh"]
