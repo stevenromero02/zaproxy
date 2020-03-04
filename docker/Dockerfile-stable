@@ -30,6 +30,7 @@ RUN pip3 install --upgrade pip zapcli python-owasp-zap-v2.4
 
 RUN useradd -d /home/ubuntu -m -s /bin/bash ubuntu
 RUN echo ubuntu:ubuntu | chpasswd
+RUN mkdir -p /home/ubuntu/.local/bin
 RUN useradd -d /home/zap -m -s /bin/bash zap
 RUN echo zap:zap | chpasswd
 RUN mkdir /zap && chown zap:zap /zap
