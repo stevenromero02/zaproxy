@@ -28,6 +28,8 @@ RUN apt-get update && apt-get install -q -y --fix-missing \
 RUN pip install --upgrade pip zapcli python-owasp-zap-v2.4
 RUN pip3 install --upgrade pip zapcli python-owasp-zap-v2.4
 
+RUN useradd -d /home/ubuntu -m -s /bin/bash ubuntu
+RUN echo ubuntu:ubuntu | chpasswd
 RUN useradd -d /home/zap -m -s /bin/bash zap
 RUN echo zap:zap | chpasswd
 RUN mkdir /zap && chown zap:zap /zap
@@ -84,4 +86,4 @@ RUN chown zap:zap /zap/* && \
 #Change back to zap at the end
 USER zap
 
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "/zap-webswing.sh"]
