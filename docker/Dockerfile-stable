@@ -84,8 +84,10 @@ RUN chown zap:zap /zap/* && \
 	chown zap:zap -R /home/zap/.ZAP/ && \
 	chown zap:zap /home/zap/.xinitrc && \
 	chmod a+x /home/zap/.xinitrc
+	
+RUN ./zap-webswing.sh
 
 #Change back to zap at the end
 USER zap
 
-CMD ["/bin/bash", "/zap-webswing.sh"]
+CMD ["/bin/bash"]
