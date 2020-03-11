@@ -91,4 +91,4 @@ RUN chmod 755 /zap/zap-webswing.sh
 #Change back to zap at the end
 USER zap
 
-ENTRYPOINT ["/bin/bash", "-c", "/zap-webswing.sh"]
+CMD ["/bin/bash"]
